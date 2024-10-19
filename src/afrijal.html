@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard User</title>
+    <link rel="stylesheet" href="./output.css" />
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-white">
+    <!-- component -->
+    <div>
+      <script
+        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+        defer
+      ></script>
+
+      <div x-data="{ sidebarOpen: false }" class="flex h-screen">
+        <div
+          :class="sidebarOpen ? 'block' : 'hidden'"
+          @click="sidebarOpen = false"
+          class="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden"
+        ></div>
+
+        <div
+          :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
+          class="fixed left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-pinkSec lg:translate-x-0 lg:static lg:inset-0 h-screen"
+        >
+          <div
+            class="flex items-center justify-center pt-8 mb-8 border-b-[2px] border-b-slate-400"
+          >
+            <img src="../public/image/logo/logo 1.png" alt="" />
+          </div>
+
+          <!-- Nav Menu Start -->
+          <div class="flex flex-col gap-4 px-4 py-8">
+            <a
+              href=""
+              class="flex items-center gap-2 px-4 py-2 group bg-main rounded-lg transition-all duration-300"
+            >
+              <img
+                src="../public/svg/element-equal.svg"
+                alt=""
+                class="w-6 h-6 object-cover"
+              />
+
+              <p class="text-lg text-white">Dashboard</p>
+            </a>
+
+            <a
+              href=""
+              class="flex items-center gap-2 px-4 py-2 group hover:bg-main rounded-lg transition-all duration-300"
+            >
+              <img
+                src="../public/svg/book.svg"
+                alt=""
+                class="w-6 h-6 object-cover group-hover:text-white"
+              />
+
+              <p class="text-lg text-slate-500 group-hover:text-white">
+                Data Buku
+              </p>
+            </a>
+
+            <a
+              href=""
+              class="flex items-center gap-2 px-4 py-2 group hover:bg-main rounded-lg transition-all duration-300"
+            >
+              <img
+                src="../public/svg/clipboard-text.svg"
+                alt=""
+                class="w-6 h-6 object-cover group-hover:fill-white"
+              />
+
+              <p class="text-lg text-slate-500 group-hover:text-white">
+                Data Kunjungan
+              </p>
+            </a>
+
+            <div class="mt-6">
+              <h3 class="px-4 text-lg font-normal text-slate-500">OTHER</h3>
+
+              <a
+                href=""
+                class="flex items-center gap-2 px-4 py-2 group hover:bg-main rounded-lg transition-all duration-300"
+              >
+                <img
+                  src="../public/svg/logout.svg"
+                  alt=""
+                  class="w-6 h-6 object-cover group-hover:fill-white"
+                />
+
+                <p class="text-lg text-slate-500 group-hover:text-white">
+                  Logout
+                </p>
+              </a>
+            </div>
+          </div>
+          <!-- Nav Menu End -->
+        </div>
+
+        <div class="flex flex-col flex-1 overflow-hidden">
+          <header class="w-full flex items-center justify-between px-4 py-4">
+            <!-- Hamburger Menu Start -->
+            <button
+              @click="sidebarOpen = true"
+              class="text-gray-500 focus:outline-none lg:hidden"
+            >
+              <svg
+                class="w-8 h-8"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6H20M4 12H20M4 18H11"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+            <!-- Hamburger Menu End -->
+
+            <!-- Search Bar Start -->
+            <div class="">
+              <div class="w-full mx-auto md:mx-0 md:w-full relative">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Search"
+                  class="w-full block flex-1 bg-inputColors px-6 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:border-main text-sm md:text-[16px] sm:leading-6 rounded-full"
+                />
+                <button type="submit" class="absolute right-4 top-3">
+                  <i class="fa-solid fa-search text-lg text-slate-500"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Search Bar End -->
+          </header>
+
+          <!-- Main Content Start -->
+          <main
+            class="flex-1 overflow-x-hidden overflow-y-auto px-4 md:px-8 pt-2"
+          ></main>
+          <!-- Main Content End -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
