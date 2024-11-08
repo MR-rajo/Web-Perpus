@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Kunjungan</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="shortcut icon"
+      href="../public/image/logo/logo 1.png"
+      type="image/x-icon"
+    />
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="h-[2000px]">
+    <!-- Header Section Start -->
+    <header class="py-4 bg-primaryBlue fixed left-0 top-0 w-full shadow-lg">
+      <div class="w-full px-4">
+        <div class="container mx-auto">
+          <nav class="flex justify-between items-center">
+            <!-- Tombol Kembali Start -->
+            <a href="userDashboard.html">
+              <div class="flex items-center">
+                <svg
+                class="w-4 h-4 md:w-6 md:h-6"
+                  width=""
+                  height=""
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.07996"
+                    stroke="#ECE6FF"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <h3 class="font-bold text-sm md:text-[20px] text-pinkSec">
+                  Kembali
+                </h3>
+              </div>
+            </a>
+            <!-- Tombol Kembali End -->
+
+            <!-- Title Start -->
+            <div class="">
+              <h1 class="text-lg md:text-2xl font-bold text-pinkSec">
+                Data Kunjungan
+              </h1>
+            </div>
+            <!-- Title End -->
+
+            <!-- Kosong Start -->
+            <div class="px-10"></div>
+            <!-- Kosong End -->
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Content Section Start -->
+     <section class="pt-24 pb-32">
+        <div class="w-full px-4">
+            <div class="container mx-auto">
+
+                <!-- Filter Start -->
+                <form action="" method="post" class="my-8">
+                    <div class="flex flex-wrap items-center gap-4">
+
+                        <div class="bg-primaryBlue md:w-fit px-4 py-2 text-white rounded">
+                            <select name="" id="" class="bg-transparent w-full">
+                                <option value="" class="text-black">Date</option>
+                                <option value="" class="text-black">1</option>
+                                <option value="" class="text-black">2</option>
+                                <option value="" class="text-black">3</option>
+                                <option value="" class="text-black">4</option>
+                                <option value="" class="text-black">5</option>
+                                <option value="" class="text-black">6</option>
+                                <option value="" class="text-black">7</option>
+                                <option value="" class="text-black">8</option>
+                                <option value="" class="text-black">9</option>
+                                <option value="" class="text-black">10</option>
+                            </select>
+                        </div>
+
+                        <div class="bg-primaryBlue md:w-fit px-3 py-2 text-white rounded">
+                            <select name="" id="" class="bg-transparent w-full">
+                                <option value="" class="text-black">Month</option>
+                                <option value="" class="text-black">Januari</option>
+                                <option value="" class="text-black">Februari</option>
+                                <option value="" class="text-black">Maret</option>
+                                <option value="" class="text-black">April</option>
+                                <option value="" class="text-black">Mei</option>
+                                <option value="" class="text-black">Juni</option>
+                                <option value="" class="text-black">Juli</option>
+                                <option value="" class="text-black">Agustus</option>
+                                <option value="" class="text-black">September</option>
+                                <option value="" class="text-black">Oktober</option>
+                                <option value="" class="text-black">November</option>
+                                <option value="" class="text-black">Desember</option>
+                            </select>
+                        </div>
+
+                        <div class="bg-primaryBlue md:w-fit px-4 py-2 text-white rounded">
+                            <select name="" id="" class="bg-transparent w-full">
+                                <option value="" class="text-black">Years   </option>
+                                <option value="" class="text-black">2020</option>
+                                <option value="" class="text-black">2021</option>
+                                <option value="" class="text-black">2022</option>
+                                <option value="" class="text-black">2023</option>
+                                <option value="" class="text-black">2024</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="px-4 py-2 md:w-fit bg-greenyellow text-black font-normal rounded">Search</button>
+                    </div>
+                </form>
+                <!-- Filter End -->
+                 
+                <!-- Table Start -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr class="w-full bg-primaryBlue text-left text-white capitalize text-sm md:text-lg leading-normal rounded-3xl">
+                                <th class="py-3 px-6">NO</th>
+                                <th class="py-3 px-6">Foto Buku</th>
+                                <th class="py-3 px-6">Judul Buku</th>
+                                <th class="py-3 px-6">Batas Waktu</th>
+                                <th class="py-3 px-6">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-sm">
+                            <tr class="hover:bg-gray-100 text-primaryBlue font-bold">
+                                <td class="py-3 px-6">1</td>
+                                <td class="py-3 px-6">
+                                    <img src="../public/image/card buku/1.png" alt="" class="h-16 object-cover">
+                                </td>
+                                <td class="py-3 px-6">Buku Geografis</td>
+                                <td class="py-3 px-6">-</td>
+                                <td class="py-3 px-6">
+                                    <a href="" class="px-4 py-2 block lg:w-[40%] xl:w-fit text-center bg-pinkButton text-white rounded-lg text-xs md:text-sm font-normal">Sedang Dipinjam</a>
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100 text-primaryBlue font-bold">
+                                <td class="py-3 px-6">1</td>
+                                <td class="py-3 px-6">
+                                    <img src="../public/image/card buku/2.png" alt="" class="h-16 object-cover">
+                                </td>
+                                <td class="py-3 px-6">Buku Geografis</td>
+                                <td class="py-3 px-6">-</td>
+                                <td class="py-3 px-6">
+                                    <a href="" class="px-4 py-2 block lg:w-[40%] xl:w-fit text-center bg-greenyellow text-white rounded-lg text-xs md:text-sm font-normal">Proses</a>
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100 text-primaryBlue font-bold">
+                                <td class="py-3 px-6">1</td>
+                                <td class="py-3 px-6">
+                                    <img src="../public/image/card buku/3.png" alt="" class="h-16 object-cover">
+                                </td>
+                                <td class="py-3 px-6">Buku Geografis</td>
+                                <td class="py-3 px-6">-</td>
+                                <td class="py-3 px-6">
+                                    <a href="" class="px-4 py-2 block lg:w-[40% text-center xl:w-fit bg-greens text-white rounded-lg text-sm font-normal">Sudah Dikembalikan</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>        
+                <!-- Table End -->
+            </div>
+        </div>
+     </section>
+    <!-- Content Section End -->
+  </body>
+</html>
